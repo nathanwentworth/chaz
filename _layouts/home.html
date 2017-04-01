@@ -1,0 +1,15 @@
+---
+layout: default
+---
+
+  <div id='gallery' class="gallery">
+    {% for image in site.static_files %}
+      {% if image.path contains 'img-gallery' %}
+        <div style="background-image:url('{{ site.baseurl }}{{ image.path }}')" alt="image"> </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+
+  <script type="text/javascript" src="{{ site.github.url }}/assets/scripts.js"></script>
+
+
